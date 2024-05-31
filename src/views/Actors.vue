@@ -4,22 +4,28 @@ const episodes = episodesData;
 </script>
 
 <template>
-<div class="wrapper">
-  <div class="cont">
-  <p class="mainthirdP">Эпизоды</p>
-  <div class="season"><p>Сезон 1</p></div>
-    <div class="episodes-content">
-      <div class="carts">
-        <div class="carts-actors" v-for="(episode,index) in episodes" :key="index">
-          <img :src="episode.image" alt="episode.name">
-
-
-          <p>{{episode.name}}</p>
-          <h1>{{episode.description}}</h1>
-          <h2>{{episode.date}}</h2>
+  <div class="wrapper">
+    <div class="cont">
+      <p class="mainthirdP">Эпизоды</p>
+      <div class="season"><p>Сезон 1</p></div>
+      <div class="episodes-content">
+        <div class="carts">
+          <div class="carts-actors" v-for="(episode, index) in episodes" :key="index">
+            <iframe v-if="index === 0" width="400" height="230" src="https://www.youtube.com/embed/LiUiD6AGaHw?si=Z7DXXTr19f8tg8M9" title="YouTube video player"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+                   web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe v-if="index === 1" width="400" height="230" src="https://www.youtube.com/embed/fpG2IAYMzBM?si=F3iLh2Dhha1tQQkG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe v-if="index === 2" width="400" height="230" src="https://www.youtube.com/embed/0XtJQotJxJY?si=lmihvj7oWsR8HJQe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe v-if="index === 3" width="400" height="230" src="https://www.youtube.com/embed/8jt31SBRtHg?si=gsx0602TPlqTm9DJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe v-if="index === 4" width="400" height="230" src="https://www.youtube.com/embed/Iqq168pVMcQ?si=YidpanSHpDjiYszX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe v-if="index === 5" width="400" height="230" src="https://www.youtube.com/embed/ngsnmr06ueQ?si=Ou763dTWK0x--QHJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>{{ episode.name }}</p>
+            <h1>{{ episode.description }}</h1>
+            <h2>{{ episode.date }}</h2>
+          </div>
         </div>
       </div>
-    </div></div>
+    </div>
   </div>
 </template>
 
